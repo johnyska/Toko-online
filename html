@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .produk { display: inline-block; margin: 20px; padding: 10px; border: 1px solid #ddd; }
+        img { width: 150px; height: 150px; }
+        button { background: green; color: white; padding: 10px; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang di Toko Online</h1>
+    <div id="produk-list">
+        <div class="produk">
+            <img src="produk1.jpg" alt="Produk 1">
+            <h3>Produk 1</h3>
+            <p>Rp 100.000</p>
+            <button onclick="pesan('Produk 1')">Pesan</button>
+        </div>
+        <div class="produk">
+            <img src="produk2.jpg" alt="Produk 2">
+            <h3>Produk 2</h3>
+            <p>Rp 150.000</p>
+            <button onclick="pesan('Produk 2')">Pesan</button>
+        </div>
+    </div>
+    
+    <h2>Formulir Pemesanan</h2>
+    <form id="form-pemesanan">
+        <input type="text" id="nama" placeholder="Nama Anda" required><br><br>
+        <input type="text" id="produk" placeholder="Produk yang Dipesan" required readonly><br><br>
+        <button type="submit">Kirim Pesanan</button>
+    </form>
+
+    <script>
+        function pesan(namaProduk) {
+            document.getElementById('produk').value = namaProduk;
+        }
+    </script>
+</body>
+</html>
